@@ -1,0 +1,23 @@
+name: main
+
+on: push
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        host:
+          - runs-on: ubuntu-20.04
+          - runs-on: macos-10.15
+          - runs-on: macos-11
+        test:
+          - package: torrentcheck
+
+    runs-on: ${{ matrix.host.runs-on }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Test
+      run: echo ${{ matrix.test.package }}
