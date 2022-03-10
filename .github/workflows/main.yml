@@ -19,5 +19,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Tap
+      run: |
+        mkdir -p "$(brew --repo)/Library/Taps/JrMasterModelBuilder"
+        ln -s "$PWD" "$(brew --repo)/Library/Taps/JrMasterModelBuilder/homebrew-torrentcheck"
+        brew tap --repair
+
+    - name: Taps
+      run: brew tap
+
     - name: Test
       run: echo ${{ matrix.test.package }}
