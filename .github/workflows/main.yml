@@ -29,8 +29,14 @@ jobs:
       - name: Taps
         run: brew tap
 
+      - name: Info
+        run: brew info "github/test/${{ matrix.package.name }}"
+
       - name: Install
-        run: brew install "github/test/${{ matrix.package.name }}"
+        run: brew install -v "github/test/${{ matrix.package.name }}"
+
+      - name: Install
+        run: brew audit --except=file,specs "github/test/${{ matrix.package.name }}"
 
       - name: Test
         run: brew test "github/test/${{ matrix.package.name }}"
