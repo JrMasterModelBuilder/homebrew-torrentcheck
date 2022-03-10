@@ -10,8 +10,9 @@ jobs:
           - runs-on: ubuntu-20.04
           - runs-on: macos-10.15
           - runs-on: macos-11
-        test:
-          - package: torrentcheck
+        package:
+          - name: torrentcheck
+            test: 0
 
     runs-on: ${{ matrix.host.runs-on }}
 
@@ -29,7 +30,8 @@ jobs:
         run: brew tap
 
       - name: Install
-        run: brew install "github/test/${{ matrix.test.package }}"
+        run: brew install "github/test/${{ matrix.package.name }}"
 
       - name: Test
-        run: brew test "github/test/${{ matrix.test.package }}"
+        run: brew test "github/test/${{ matrix.package.name }}"
+        if: matrix.package.test == 1
