@@ -25,8 +25,8 @@ jobs:
     - name: Tap Link
       run: ln -s "$PWD" "$(brew --repo)/Library/Taps/github/homebrew-test"
 
-    - name: Tap Repair
-      run: brew tap --repair
+    # - name: Tap Repair
+    #   run: brew tap --repair
 
     - name: Taps
       run: brew tap
