@@ -28,5 +28,8 @@ jobs:
     - name: Taps
       run: brew tap
 
+    - name: Install
+      run: brew install "github/test/${{ matrix.test.package }}"
+
     - name: Test
       run: brew test "github/test/${{ matrix.test.package }}"
