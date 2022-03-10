@@ -35,7 +35,10 @@ jobs:
       - name: Install
         run: brew install -v "github/test/${{ matrix.package.name }}"
 
-      - name: Install
+      - name: Installed
+        run: brew info "github/test/${{ matrix.package.name }}"
+
+      - name: Audit
         run: brew audit --except=file,specs "github/test/${{ matrix.package.name }}"
 
       - name: Test
