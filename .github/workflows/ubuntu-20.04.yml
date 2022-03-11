@@ -1,4 +1,4 @@
-name: torrentcheck-ubuntu-20.04
+name: Ubuntu 20.04
 
 on:
   push:

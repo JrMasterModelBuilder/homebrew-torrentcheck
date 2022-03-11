@@ -1,4 +1,4 @@
-name: torrentcheck-macos-11
+name: macOS 11
 
 on:
   push:
