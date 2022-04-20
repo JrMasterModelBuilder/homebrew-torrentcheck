@@ -1,6 +1,6 @@
 # Homebrew torrentcheck
 
-Hombrew tap for torrentcheck
+Homebrew tap for torrentcheck
 
 [![Build Status](https://github.com/JrMasterModelBuilder/homebrew-torrentcheck/workflows/macOS%2011/badge.svg?branch=main)](https://github.com/JrMasterModelBuilder/homebrew-torrentcheck/actions?query=workflow%3AmacOS%2011+branch%3Amain)
 
