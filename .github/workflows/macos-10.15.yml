@@ -21,10 +21,10 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
 
       - name: Tap Dir
-        run: mkdir -p "$(dirname "$(brew --repo)/Library/Taps/${{ lowercase(github.repository) }}")"
+        run: mkdir -p "$(brew --repo)/Library/Taps/$(dirname "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')"
 
       - name: Tap Install
-        run: cp -R "$PWD" "$(brew --repo)/Library/Taps/${{ lowercase(github.repository) }}"
+        run: ln -s "$PWD" "$(brew --repo)/Library/Taps/$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')"
 
       - name: Taps
         run: brew tap
