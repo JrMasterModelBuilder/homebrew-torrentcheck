@@ -26,6 +26,9 @@ jobs:
       - name: Tap Install
         run: cp -R "$PWD" "$(brew --repo)/Library/Taps/${{ github.repository }}"
 
+      - name: Tap
+        run: brew tap
+
       - name: Info
         run: brew info "${{ matrix.config.name }}"
 
