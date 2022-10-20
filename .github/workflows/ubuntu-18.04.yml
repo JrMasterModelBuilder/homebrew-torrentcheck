@@ -24,7 +24,7 @@ jobs:
         run: mkdir -p "$(dirname "$(brew --repo)/Library/Taps/${{ github.repository }}")"
 
       - name: Tap Install
-        run: mv "$PWD" "$(brew --repo)/Library/Taps/${{ github.repository }}"
+        run: cp -R "$PWD" "$(brew --repo)/Library/Taps/${{ github.repository }}"
 
       - name: Info
         run: brew info "${{ matrix.config.name }}"
