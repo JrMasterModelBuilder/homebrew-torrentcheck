@@ -17,12 +17,12 @@ Homebrew tap for torrentcheck
 
 ## Tap
 
-```
-$ brew tap JrMasterModelBuilder/torrentcheck
+```sh
+brew tap JrMasterModelBuilder/torrentcheck
 ```
 
 ## Install
 
-```
-$ brew install torrentcheck
+```sh
+brew install torrentcheck
 ```
