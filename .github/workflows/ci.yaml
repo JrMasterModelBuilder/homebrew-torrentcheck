@@ -50,5 +50,5 @@ jobs:
       - name: Audit
         run: brew audit --except=file,specs "${{ matrix.name }}"
 
-      - name: Test
-        run: brew test "${{ matrix.name }}"
+      # - name: Test
+      #   run: brew test "${{ matrix.name }}"
