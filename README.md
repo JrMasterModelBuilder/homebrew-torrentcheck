@@ -8,6 +8,7 @@ Homebrew tap for torrentcheck
 
 ```sh
 brew tap JrMasterModelBuilder/torrentcheck
+brew trust JrMasterModelBuilder/torrentcheck
 ```
 
 ## Install
